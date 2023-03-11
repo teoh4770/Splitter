@@ -16,7 +16,8 @@
 
 <body class="bg-light-grayish-cyan">
   <header>
-    <h2 aria-label="SPLITTER" class="text-dark-cyan text-center uppercase ls-lg">
+    <h1 class="sr-only">SPLITTER - A TIP CALCULATOR THAT MAKE COUNTING TIP WAY EASIER</h1>
+    <h2 class="text-dark-cyan text-center uppercase ls-lg">
       <span class="block">Spli</span><span>tter</span>
     </h2>
     <p class="text-center text-small">Can't avoid tipping 😭</p>
@@ -33,12 +34,11 @@
         <!-- The bill input -->
         <div>
           <label for="bill">Bill</label>
-          <input type="number" class="text-large" id="bill" placeholder="0" aria-placeholder="0.00" min="0" step="0.01"
-            value="0">
+          <input type="number" class="text-large" id="bill" placeholder="0" min="0" step="0.01" value="0">
         </div>
         <!-- The tip input -->
         <div>
-          <p name="label">Select Tip %</p>
+          <p class="label">Select Tip %</p>
           <div id="tips" class="flexible-grid">
             <button class="bg-dark-cyan text-light-grayish-cyan " name="tip-amount" aria-label="tip-amount"
               value="0">0%</button>
@@ -58,8 +58,7 @@
         <!-- The number of people input -->
         <div>
           <label for="number-of-people">Number of people</label>
-          <input type="number" class="text-large" id="number-of-people" placeholder="0" aria-placeholder="0" min="0"
-            defaultValue="1">
+          <input type="number" class="text-large" id="number-of-people" placeholder="0" min="0">
         </div>
       </section>
 
@@ -67,21 +66,21 @@
 
         <!-- tip amount output -->
         <div class="output">
-          <div name="tip-per-person-text">
+          <div>
             <span class="text-light-grayish-cyan block">Tip Amount</span>
             <span style="font-size: 0.85rem; color: hsl(0, 100%, 100%,.8)">/ person</span>
           </div>
-          <div name="tip-per-person-result">
+          <div>
             <span class="text-large text-cyan">$<span id="tip-per-person-result">0.00</span></span>
           </div>
         </div>
         <!-- total per person output -->
         <div class="output">
-          <div name="total-per-person-text">
+          <div>
             <span class="text-light-grayish-cyan block">Total</span>
             <span style="font-size: 0.85rem; color: hsl(0, 100%, 100%,.8)">/ person</span>
           </div>
-          <div name="total-per-person-result">
+          <div>
             <span class="text-large text-cyan">$<span id="total-per-person-result">0.00</span></span>
           </div>
         </div>
@@ -91,10 +90,10 @@
     </div>
   </main>
 
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://www.frontendmentor.io/profile/teoh4770">Chee Kian Teoh</a>.
-  </div>
+  </footer>
 </body>
 
 </html>

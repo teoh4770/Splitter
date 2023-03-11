@@ -182,6 +182,18 @@ input[type=number] {
   max-width: 100%;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /* end of general utility */
 
 /* general setting */
@@ -274,13 +286,13 @@ input::placeholder {
 }
 
 label,
-[name="label"] {
+.label {
   display: block;
   margin-bottom: 0.25rem;
   color: var(--dark-grayish-cyan);
 }
 
-[name="label"] {
+.label {
   margin-bottom: 0.75em;
 }
 
