@@ -90,6 +90,7 @@ function setBill(e) {
     bill = val;
   }
   output();
+  disabledBtn();
 }
 
 function customizeTip(e) {
@@ -103,12 +104,14 @@ function customizeTip(e) {
       e.target.value = val;
   }
   output();
+  disabledBtn();
 }
 
 function setTip(e) {
   tip = parseInt(e.target.value) / 100;
   console.log(tip);
   output();
+  disabledBtn()
 }
 
 function setNumberOfPeople(e) {
@@ -123,12 +126,14 @@ function setNumberOfPeople(e) {
   }
   
   output();
+  disabledBtn();
 }
 
 function reset() {
   [bill, tip, people].forEach(variable => {variable = 0});
   [billInput, customTipInput, numberOfPeopleInput].forEach(e => e.value = "");
   [tipPerPersonResultEle, totalPerPersonResultEle].forEach(e => e.textContent = "0.00");
+  disabledBtn();
 }
 
 /*********************/
@@ -163,6 +168,7 @@ function setEventListeners() {
   btnTipInputs.forEach(btn => {
     btn.addEventListener("click", setTip);
   });
+  customTipInput.addEventListener("click", customizeTip);
   customTipInput.addEventListener("input", customizeTip);
   numberOfPeopleInput.addEventListener("input", setNumberOfPeople);
   resetBtn.addEventListener("click", reset);
@@ -172,9 +178,19 @@ function resetElements() {
   billInput.value = "";
   customTipInput.value = "";
   numberOfPeopleInput.value = "";
+  resetBtn.setAttribute("disabled", "true");
 }
 
 function output() {
   tipPerPersonResultEle.textContent = getTipPerPerson();
   totalPerPersonResultEle.textContent = getTotalPerPerson();
+}
+
+function disabledBtn() {
+  if(bill !== 0) {
+    resetBtn.removeAttribute("disabled");
+  }
+  else {
+    resetBtn.setAttribute("disabled", "true");
+  }
 }

@@ -221,6 +221,12 @@ input[type=number]:focus {
   outline-style: solid;
 }
 
+button:disabled {
+  background-color: hsl(0, 0%, 100%, .5);
+  color: white;
+  cursor:auto;
+}
+
 /* end of  general setting */
 
 
