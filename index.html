@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body class="bg-light-grayish-cyan">
+  <header>
+    <h2 aria-label="SPLITTER" class="text-dark-cyan text-center uppercase ls-lg">
+      <span class="block">Spli</span><span>tter</span>
+    </h2>
+    <p class="text-center text-small">Tipping is necessary!</p>
+  </header>
+  <main id="tip-calculator" class="bg-white">
+    <!-- container
+      max-width: 920px, full-width, flexbox that split to 2 column, use flex-wrap to get them to 1 column
+      the left side of the column would be the input
+      the right side of the column would be the output
+    -->
+    <div class="container">
+
+      <section class="inputs">
+        <!-- The bill input -->
+        <div>
+          <label for="bill">Bill</label>
+          <input type="number" class="text-large" id="bill" placeholder="0" aria-placeholder="0.00" min="0" step="0.01"
+            value="0">
+        </div>
+        <!-- The tip input -->
+        <div>
+          <p name="label">Select Tip %</p>
+          <div id="tips" class="flexible-grid">
+            <button class="bg-dark-cyan text-light-grayish-cyan " name="tip-amount" aria-label="tip-amount"
+              value="0">0%</button>
+            <button class="bg-dark-cyan text-light-grayish-cyan " name="tip-amount" aria-label="tip-amount"
+              value="5">5%</button>
+            <button class="bg-dark-cyan text-light-grayish-cyan " name="tip-amount" aria-label="tip-amount"
+              value="10">10%</button>
+            <button class="bg-dark-cyan text-light-grayish-cyan " name="tip-amount" aria-label="tip-amount"
+              value="15">15%</button>
+            <button class="bg-dark-cyan text-light-grayish-cyan " name="tip-amount" aria-label="tip-amount"
+              value="25">25%</button>
+
+            <input class="text-large bg-dark-cyan text-light-grayish-cyan " name="tip-amount"
+              aria-label="custom-tip-amount" type="number" id="custom" placeholder="Custom">
+          </div>
+        </div>
+        <!-- The number of people input -->
+        <div>
+          <label for="number-of-people">Number of people</label>
+          <input type="number" class="text-large" id="number-of-people" placeholder="0" aria-placeholder="0" min="0"
+            defaultValue="1">
+        </div>
+      </section>
+
+      <section class="outputs bg-dark-cyan">
+
+        <!-- tip amount output -->
+        <div class="output">
+          <div name="tip-per-person-text">
+            <span class="text-light-grayish-cyan block">Tip Amount</span>
+            <span style="font-size: 0.85rem; color: hsl(0, 100%, 100%,.8)">/ person</span>
+          </div>
+          <div name="tip-per-person-result">
+            <span class="text-large text-cyan">$<span id="tip-per-person-result">0.00</span></span>
+          </div>
+        </div>
+        <!-- total per person output -->
+        <div class="output">
+          <div name="total-per-person-text">
+            <span class="text-light-grayish-cyan block">Total</span>
+            <span style="font-size: 0.85rem; color: hsl(0, 100%, 100%,.8)">/ person</span>
+          </div>
+          <div name="total-per-person-result">
+            <span class="text-large text-cyan">$<span id="total-per-person-result">0.00</span></span>
+          </div>
+        </div>
+        <!-- reset button -->
+        <button type="button" id="reset" class="bg-cyan text-dark-cyan uppercase">reset</button>
+      </section>
+    </div>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/teoh4770">Chee Kian Teoh</a>.
+  </div>
+</body>
+
+</html>
