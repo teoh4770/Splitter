@@ -1,4 +1,4 @@
-# Frontend Mentor - Tip calculator app
+# Splitter - Tip and Split 
 
 Link: [Click Me!](https://teoh4770.github.io/tips-calc-app/)
 
